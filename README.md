@@ -25,7 +25,7 @@ An x86 offload host with RTX 3090s supplies host-memory Engram tables and remote
 | [dsv41-remote-engram-rdma](https://github.com/ProprietaryLegal/dsv41-remote-engram-rdma) | Engram tables served from host RAM over RDMA | Production |
 | [ofl-rdma-transport](https://github.com/ProprietaryLegal/ofl-rdma-transport) | RDMA and TCP request/response transport | Production |
 | [dsv41-native-1017-drafter-sm86](https://github.com/ProprietaryLegal/dsv41-native-1017-drafter-sm86) | Native-format drafter kernels on RTX 3090 | Opt-in research: strict fidelity gate failing, fix in progress |
-| [dsv41-kv-page-packing-1m](https://github.com/ProprietaryLegal/dsv41-kv-page-packing-1m) | KV page packing and a 1M-token context limit (overlay on the upstream image) | In progress: GB10 test running |
+| [dsv41-kv-page-packing-1m](https://github.com/ProprietaryLegal/dsv41-kv-page-packing-1m) | KV page packing and a 1M-token context limit (overlay on the upstream image) | KV page packing validated on GB10 at 327,680 (production promotion pending); 524,288 serves correctly but is held for a prefill regression under investigation. 1M untested on GB10. |
 | [dsv41-longctx-bench-tools](https://github.com/ProprietaryLegal/dsv41-longctx-bench-tools) | Long-context timing, interference, and failure tools | Research: proven measurement tools |
 | [dsv41-exact-acceptance-ceiling](https://github.com/ProprietaryLegal/dsv41-exact-acceptance-ceiling) | Exact replay method for speculative-acceptance headroom | Research |
 | [dsv41-spark-offload-findings](https://github.com/ProprietaryLegal/dsv41-spark-offload-findings) | Findings, failure analysis, and limits | Research |
