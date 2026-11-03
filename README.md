@@ -4,7 +4,24 @@ Your proprietary work product is your proprietary intelligence.
 
 [Website](https://proprietarylegal.ai) · [PLI Labs](https://proprietarylegal.ai/labs.html) · [Research](https://proprietarylegal.ai/research/index.html) · [Hugging Face](https://huggingface.co/ProprietaryLegal) · [Contact](https://proprietarylegal.ai/contact.html)
 
-## Featured: [DGX sPLIce](https://github.com/ProprietaryLegal/DGX-sPLIce-DeepSeek-V4.1-Flash-2xDGX-Spark-2xRTX3090-drafter-x86-offload)
+## Featured: [Volta sPLIt](https://github.com/ProprietaryLegal/Volta-sPLIt-DeepSeek-V4.1-Flash-1017-8xV100-SXM2-PP2xTP4): ~118 tok/s on eight 2018 V100s
+
+[![decode: ~118 tok/s](https://img.shields.io/badge/decode-~118%20tok%2Fs-2EA043?style=for-the-badge)](https://github.com/ProprietaryLegal/Volta-sPLIt-DeepSeek-V4.1-Flash-1017-8xV100-SXM2-PP2xTP4) [![thinking on: ~121 tok/s](https://img.shields.io/badge/thinking%20on-~121%20tok%2Fs-1F6FEB?style=for-the-badge)](https://github.com/ProprietaryLegal/Volta-sPLIt-DeepSeek-V4.1-Flash-1017-8xV100-SXM2-PP2xTP4) [![context: 524K](https://img.shields.io/badge/context-524K%20per%20request-555555?style=for-the-badge)](https://github.com/ProprietaryLegal/Volta-sPLIt-DeepSeek-V4.1-Flash-1017-8xV100-SXM2-PP2xTP4)
+
+**~118 tok/s decode, ~121 tok/s with thinking on: DeepSeek-V4.1-Flash-1017 on 8x V100-SXM2-32GB.** The whole 249 GB
+model, every expert, resident in the HBM2 of eight sm_70 cards from 2018, split pipeline-parallel 2 x tensor-parallel 4
+across two NVLink boards. Our port of 1Cat-vLLM #1277 went from 99 to ~118 tok/s in one day, one A/B-tested switch at a
+time, with exact outputs. Every patch, measurement and losing idea is published.
+
+| Decode, thinking off | Thinking on | Thinking high, DGX sPLIce's benchmark | After a 500K-token prompt | vs our previous V100 build |
+| --- | --- | --- | --- | --- |
+| ~118 tok/s | ~121 tok/s | 84.6-87.3 tok/s | 61.7 tok/s | 2.6x per verify round |
+
+<sub>One request at a time, 2026-11-03, 150 W per card, DSpark 5 drafts per round. ~118 / ~121 are ESTIMATED (the measured ~114 / ~117 stack minus a measured −0.871 ms/round kernel change); the other figures are MEASURED. Method, every lever and the test queue are in the <a href="https://github.com/ProprietaryLegal/Volta-sPLIt-DeepSeek-V4.1-Flash-1017-8xV100-SXM2-PP2xTP4">repository</a>.</sub>
+
+[Repository](https://github.com/ProprietaryLegal/Volta-sPLIt-DeepSeek-V4.1-Flash-1017-8xV100-SXM2-PP2xTP4) · [Measurements](https://github.com/ProprietaryLegal/Volta-sPLIt-DeepSeek-V4.1-Flash-1017-8xV100-SXM2-PP2xTP4/blob/main/docs/measurements.md) · [Every lever, won and lost](https://github.com/ProprietaryLegal/Volta-sPLIt-DeepSeek-V4.1-Flash-1017-8xV100-SXM2-PP2xTP4/blob/main/docs/levers.md) · [Test queue](https://github.com/ProprietaryLegal/Volta-sPLIt-DeepSeek-V4.1-Flash-1017-8xV100-SXM2-PP2xTP4/blob/main/docs/roadmap.md) · [Hugging Face card](https://huggingface.co/ProprietaryLegal/Volta-sPLIt-DeepSeek-V4.1-Flash-1017-8xV100-GGUF)
+
+## Also featured: [DGX sPLIce](https://github.com/ProprietaryLegal/DGX-sPLIce-DeepSeek-V4.1-Flash-2xDGX-Spark-2xRTX3090-drafter-x86-offload)
 
 **DGX sPLIce: DeepSeek-V4.1-Flash on 2x DGX Spark + 2x RTX 3090 drafter, x86 offload.** Two NVIDIA DGX Spark (GB10)
 nodes serve the model in tensor parallel; an ordinary x86 machine holds the Engram tables in RAM and serves them over
@@ -46,6 +63,7 @@ Earlier standalone releases of DGX sPLIce's parts and research, each with its ow
 
 | Repository | What it is |
 | --- | --- |
+| [Volta-sPLIt-DeepSeek-V4.1-Flash-1017-8xV100-SXM2-PP2xTP4](https://github.com/ProprietaryLegal/Volta-sPLIt-DeepSeek-V4.1-Flash-1017-8xV100-SXM2-PP2xTP4) | **~118 tok/s**: DeepSeek-V4.1-Flash-1017 on 8x V100, PP2 x TP4, every expert resident; full patch series, measurements and test queue (2026-11-03) |
 | [deepseek-v4-flash-v100](https://github.com/ProprietaryLegal/deepseek-v4-flash-v100) | DeepSeek-V4-Flash and V4.1-Flash on NVIDIA V100: llama.cpp recipe and quantized-KV fixes (V4); 1Cat-vLLM results so far and patches (V4.1, 2026-11-01) |
 | [swift-1.5-v100](https://github.com/ProprietaryLegal/swift-1.5-v100) | Swift 1.5 on four V100s: 1Cat-vLLM serving recipe and a measured comparison with Qwen3.8-27B |
 | [V100 research notes](https://github.com/ProprietaryLegal/pli-labs/tree/main/research/v100) | Volta serving research in the pli-labs hub |
