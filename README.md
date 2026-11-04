@@ -4,21 +4,22 @@ Your proprietary work product is your proprietary intelligence.
 
 [Website](https://proprietarylegal.ai) · [PLI Labs](https://proprietarylegal.ai/labs.html) · [Research](https://proprietarylegal.ai/research/index.html) · [Hugging Face](https://huggingface.co/ProprietaryLegal) · [Contact](https://proprietarylegal.ai/contact.html)
 
-## Featured: [Volta sPLIt](https://github.com/ProprietaryLegal/Volta-sPLIt-DeepSeek-V4.1-Flash-1017-8xV100-SXM2-PP2xTP4): 119 tok/s on eight 2018 V100s
+## Featured: [Volta sPLIt](https://github.com/ProprietaryLegal/Volta-sPLIt-DeepSeek-V4.1-Flash-1017-8xV100-SXM2-PP2xTP4): 134 tok/s on eight 2018 V100s
 
-[![decode: 119.0 tok/s](https://img.shields.io/badge/decode-119.0%20tok%2Fs-2EA043?style=for-the-badge)](https://github.com/ProprietaryLegal/Volta-sPLIt-DeepSeek-V4.1-Flash-1017-8xV100-SXM2-PP2xTP4) [![thinking on: 120.8 tok/s](https://img.shields.io/badge/thinking%20on-120.8%20tok%2Fs-1F6FEB?style=for-the-badge)](https://github.com/ProprietaryLegal/Volta-sPLIt-DeepSeek-V4.1-Flash-1017-8xV100-SXM2-PP2xTP4) [![first token at 300K: -31.5%](https://img.shields.io/badge/first%20token%20at%20300K-%E2%88%9231.5%25-D29922?style=for-the-badge)](https://github.com/ProprietaryLegal/Volta-sPLIt-DeepSeek-V4.1-Flash-1017-8xV100-SXM2-PP2xTP4) [![decode round at 300K: -13.7%](https://img.shields.io/badge/decode%20round%20at%20300K-%E2%88%9213.7%25-D29922?style=for-the-badge)](https://github.com/ProprietaryLegal/Volta-sPLIt-DeepSeek-V4.1-Flash-1017-8xV100-SXM2-PP2xTP4) [![context: 524K](https://img.shields.io/badge/context-524K%20per%20request-555555?style=for-the-badge)](https://github.com/ProprietaryLegal/Volta-sPLIt-DeepSeek-V4.1-Flash-1017-8xV100-SXM2-PP2xTP4)
+[![decode: 134.2 tok/s](https://img.shields.io/badge/decode-134.2%20tok%2Fs-2EA043?style=for-the-badge)](https://github.com/ProprietaryLegal/Volta-sPLIt-DeepSeek-V4.1-Flash-1017-8xV100-SXM2-PP2xTP4) [![thinking on: 136.6 tok/s](https://img.shields.io/badge/thinking%20on-136.6%20tok%2Fs-1F6FEB?style=for-the-badge)](https://github.com/ProprietaryLegal/Volta-sPLIt-DeepSeek-V4.1-Flash-1017-8xV100-SXM2-PP2xTP4) [![first token at 300K: 159 s](https://img.shields.io/badge/first%20token%20at%20300K-159%20s%2C%20was%20264-D29922?style=for-the-badge)](https://github.com/ProprietaryLegal/Volta-sPLIt-DeepSeek-V4.1-Flash-1017-8xV100-SXM2-PP2xTP4) [![decode round at 300K: -13.7%](https://img.shields.io/badge/decode%20round%20at%20300K-%E2%88%9213.7%25-D29922?style=for-the-badge)](https://github.com/ProprietaryLegal/Volta-sPLIt-DeepSeek-V4.1-Flash-1017-8xV100-SXM2-PP2xTP4) [![context: 524K](https://img.shields.io/badge/context-524K%20per%20request-555555?style=for-the-badge)](https://github.com/ProprietaryLegal/Volta-sPLIt-DeepSeek-V4.1-Flash-1017-8xV100-SXM2-PP2xTP4)
 
-**119.0 tok/s decode, 120.8 tok/s with thinking on, MEASURED: DeepSeek-V4.1-Flash-1017 on 8x V100-SXM2-32GB.** The
+**134.2 tok/s decode, 136.6 tok/s with thinking on, MEASURED: DeepSeek-V4.1-Flash-1017 on 8x V100-SXM2-32GB.** The
 whole 249 GB model, every expert, resident in the HBM2 of eight sm_70 cards from 2018, split pipeline-parallel 2 x
-tensor-parallel 4 across two NVLink boards. Our port of 1Cat-vLLM #1277 went from 99 to 119 tok/s in one day, one
-A/B-tested switch at a time, with exact outputs; our prefill skip then cut the first token of a 300,000-token prompt
-from 264 s to 178 s, and on 2026-11-04 our tiled index scorer cut a decode round at 300K context by 13.7 %. Every patch, measurement and losing idea is published.
+tensor-parallel 4 across two NVLink boards. Our port of 1Cat-vLLM #1277 went from 99 to 134 tok/s in two days, one
+A/B-tested switch at a time, with exact outputs; the last step, on 2026-11-04, moved production to Model Runner V2 with
+our DeepSeek-V4.1 port. Our prefill skip and fused prefill index scorer cut the first token of a 300,000-token prompt
+from 264 s to 159 s, and our tiled index scorer cut a decode round at 300K context by 13.7 %. Every patch, measurement and losing idea is published.
 
 | Decode, thinking off | Thinking on | First token, 300K-token prompt | Decode round, 300K context | After a 500K-token prompt | vs our previous V100 build |
 | --- | --- | --- | --- | --- | --- |
-| 119.0 tok/s | 120.8 tok/s | 178 s (was 264 s) | 29.62 ms (was 34.33) | 61.7 tok/s | 2.7x per verify round |
+| 134.2 tok/s | 136.6 tok/s | 159 s (was 264 s) | 29.62 ms (was 34.33) | 61.7 tok/s | 3.0x per verify round |
 
-<sub>One request at a time, 2026-11-03, 150 W per card, DSpark 5 drafts per round. All MEASURED: 119.0 / 120.8 tok/s on one production boot with all 17 adopted switches, after moving one PCIe switch card so each of the four switches has its own CPU root complex (decode unchanged within noise; long-prompt first token about 2 % sooner). The 300K decode round is the tiled index scorer's A/B of 2026-11-04 (OFF 34.33, ON 29.62 ms; texts identical; short-context speed unchanged); 2.7x is 71.2 / 26.3 ms per round. Method, every lever and the test queue are in the <a href="https://github.com/ProprietaryLegal/Volta-sPLIt-DeepSeek-V4.1-Flash-1017-8xV100-SXM2-PP2xTP4">repository</a>.</sub>
+<sub>One request at a time, 150 W per card, DSpark 5 drafts per round. MEASURED: 134.2 / 136.6 tok/s are the first Model Runner V2 arm of test D54A (2026-11-04) on today's production switch set (second arm 135.0 / 136.4; bitwise-identical output to the V1 runner); the full benchmark of the production boot follows the test queue. The 300K first token (158.4-159.0 s) is test D52R2 with the fused prefill index scorer; the 300K decode round is the tiled index scorer's A/B (OFF 34.33, ON 29.62 ms; texts identical); both on the V1 runner, 2026-11-04. The 500K figure is from 2026-11-03. 3.0x is 71.2 / 23.4 ms per round (ESTIMATED arithmetic). Method, every lever and the test queue are in the <a href="https://github.com/ProprietaryLegal/Volta-sPLIt-DeepSeek-V4.1-Flash-1017-8xV100-SXM2-PP2xTP4">repository</a>.</sub>
 
 [Repository](https://github.com/ProprietaryLegal/Volta-sPLIt-DeepSeek-V4.1-Flash-1017-8xV100-SXM2-PP2xTP4) · [Measurements](https://github.com/ProprietaryLegal/Volta-sPLIt-DeepSeek-V4.1-Flash-1017-8xV100-SXM2-PP2xTP4/blob/main/docs/measurements.md) · [Every lever, won and lost](https://github.com/ProprietaryLegal/Volta-sPLIt-DeepSeek-V4.1-Flash-1017-8xV100-SXM2-PP2xTP4/blob/main/docs/levers.md) · [Test queue](https://github.com/ProprietaryLegal/Volta-sPLIt-DeepSeek-V4.1-Flash-1017-8xV100-SXM2-PP2xTP4/blob/main/docs/roadmap.md) · [Hugging Face card](https://huggingface.co/ProprietaryLegal/Volta-sPLIt-DeepSeek-V4.1-Flash-1017-8xV100-GGUF)
 
@@ -64,7 +65,7 @@ Earlier standalone releases of DGX sPLIce's parts and research, each with its ow
 
 | Repository | What it is |
 | --- | --- |
-| [Volta-sPLIt-DeepSeek-V4.1-Flash-1017-8xV100-SXM2-PP2xTP4](https://github.com/ProprietaryLegal/Volta-sPLIt-DeepSeek-V4.1-Flash-1017-8xV100-SXM2-PP2xTP4) | **119.0 tok/s**: DeepSeek-V4.1-Flash-1017 on 8x V100, PP2 x TP4, every expert resident; full patch series, measurements and test queue (2026-11-03) |
+| [Volta-sPLIt-DeepSeek-V4.1-Flash-1017-8xV100-SXM2-PP2xTP4](https://github.com/ProprietaryLegal/Volta-sPLIt-DeepSeek-V4.1-Flash-1017-8xV100-SXM2-PP2xTP4) | **134.2 tok/s**: DeepSeek-V4.1-Flash-1017 on 8x V100, PP2 x TP4, every expert resident; full patch series, measurements and test queue (2026-11-04) |
 | [deepseek-v4-flash-v100](https://github.com/ProprietaryLegal/deepseek-v4-flash-v100) | DeepSeek-V4-Flash and V4.1-Flash on NVIDIA V100: llama.cpp recipe and quantized-KV fixes (V4); 1Cat-vLLM results so far and patches (V4.1, 2026-11-01) |
 | [swift-1.5-v100](https://github.com/ProprietaryLegal/swift-1.5-v100) | Swift 1.5 on four V100s: 1Cat-vLLM serving recipe and a measured comparison with Qwen3.8-27B |
 | [V100 research notes](https://github.com/ProprietaryLegal/pli-labs/tree/main/research/v100) | Volta serving research in the pli-labs hub |
