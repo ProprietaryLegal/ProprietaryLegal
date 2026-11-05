@@ -13,7 +13,7 @@ every expert, resident in the HBM2 of eight sm_70 cards from 2018, split pipelin
 two NVLink boards. Decode depends on what the model writes: about 200 tok/s for code and JSON, 105-118 for legal text,
 85-110 for prose and chat, from a 1K prompt to 128K, a little slower at 256K. Prompt reading reaches 2,200 tok/s from
 128K up (first token 59 s at 128K). Our port of 1Cat-vLLM #1277, one A/B-tested switch at a time, with exact outputs.
-LegalBench: 0.716 balanced accuracy over 22 tasks. Every patch, measurement and losing idea is published.
+Quality, thinking off: LegalBench 0.716 balanced accuracy over 22 tasks; MMLU-Pro 79.9 % (700-item subset); HumanEval+ 89.6 % pass@1; it picks the original model's top next token 89.0 % of the time (92.5 % on legal text). Every patch, measurement and losing idea is published.
 
 | Prompt | First token | Code | Structured (JSON) | Legal | Prose | Chat |
 | --- | --- | --- | --- | --- | --- | --- |
