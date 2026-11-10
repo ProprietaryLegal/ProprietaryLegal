@@ -30,9 +30,36 @@ Quality, thinking off: LegalBench 0.716 balanced accuracy over 22 tasks; MMLU-Pr
 
 ## Also featured: [Volta Max uPLIft](https://github.com/ProprietaryLegal/Volta-Max-uPLIft-FP4-DeepSeek-V4.1-Flash-1017-NVFP4-8xV100-SXM2-PP2xTP4): as much of the routed work at NVFP4 precision as fits, every expert on the cards
 
-Volta Max uPLIft puts as much of the routed work at NVIDIA's NVFP4 precision as fits on the same eight V100s, with all routed experts on the cards (VRAM) in decode. Experts are promoted to exactly NVFP4 precision in order of use per byte until the next does not fit, and the rest run from compressed IQ2-class records. This maximizes use (the mixed tally's routed counts, in-sample), not the number of NVFP4 experts. 6,087 of the 15,360 routed experts are at NVFP4, and they carried 79 to 85 % of decode routes in the measured sets (in-sample). Decode runs at 104 to 127 tok/s on code and 62 to 72 on legal text from 1K to 256K prompts, slower than Volta sPLIt (MEASURED 2026-11-10, 1,425 MHz clock ceiling). A test of how close its output is to the all-NVFP4 build, with its rules fixed and published before any data, is running now. Its results will be added to the repository as dated rows.
+[![experts at NVFP4 precision: 6,087 of 15,360 (39.6 %)](https://img.shields.io/badge/experts%20at%20NVFP4%20precision-6%2C087%20of%2015%2C360%20%2839.6%20%25%29-76B900?style=for-the-badge)](https://github.com/ProprietaryLegal/Volta-Max-uPLIft-FP4-DeepSeek-V4.1-Flash-1017-NVFP4-8xV100-SXM2-PP2xTP4) [![decode routes at NVFP4 precision: 79-85 %](https://img.shields.io/badge/decode%20routes%20at%20NVFP4%20precision-79--85%20%25-76B900?style=for-the-badge)](https://github.com/ProprietaryLegal/Volta-Max-uPLIft-FP4-DeepSeek-V4.1-Flash-1017-NVFP4-8xV100-SXM2-PP2xTP4) [![code and JSON: 104-131 tok/s](https://img.shields.io/badge/code%20and%20JSON-104--131%20tok%2Fs-2EA043?style=for-the-badge)](https://github.com/ProprietaryLegal/Volta-Max-uPLIft-FP4-DeepSeek-V4.1-Flash-1017-NVFP4-8xV100-SXM2-PP2xTP4) [![legal: 62-72 tok/s](https://img.shields.io/badge/legal-62--72%20tok%2Fs-1F6FEB?style=for-the-badge)](https://github.com/ProprietaryLegal/Volta-Max-uPLIft-FP4-DeepSeek-V4.1-Flash-1017-NVFP4-8xV100-SXM2-PP2xTP4) [![prose and chat: 60-68 tok/s](https://img.shields.io/badge/prose%20and%20chat-60--68%20tok%2Fs-8250DF?style=for-the-badge)](https://github.com/ProprietaryLegal/Volta-Max-uPLIft-FP4-DeepSeek-V4.1-Flash-1017-NVFP4-8xV100-SXM2-PP2xTP4) [![prompt reading at 128K: 1,221-1,263 tok/s](https://img.shields.io/badge/prompt%20reading%20at%20128K-1%2C221--1%2C263%20tok%2Fs-D29922?style=for-the-badge)](https://github.com/ProprietaryLegal/Volta-Max-uPLIft-FP4-DeepSeek-V4.1-Flash-1017-NVFP4-8xV100-SXM2-PP2xTP4) [![experts on the cards in decode: all 15,360](https://img.shields.io/badge/experts%20on%20the%20cards%20in%20decode-all%2015%2C360-555555?style=for-the-badge)](https://github.com/ProprietaryLegal/Volta-Max-uPLIft-FP4-DeepSeek-V4.1-Flash-1017-NVFP4-8xV100-SXM2-PP2xTP4)
 
-[Repository](https://github.com/ProprietaryLegal/Volta-Max-uPLIft-FP4-DeepSeek-V4.1-Flash-1017-NVFP4-8xV100-SXM2-PP2xTP4) · [Hugging Face package](https://huggingface.co/ProprietaryLegal/Volta-Max-uPLIft-FP4-DeepSeek-V4.1-Flash-1017-hot_iq-8xV100-SXM2-PP2xTP4) (upload in progress)
+**DeepSeek-V4.1-Flash-1017 on the same 8x V100-SXM2-32GB, MEASURED 2026-11-10 at a 1,425 MHz clock ceiling.** Volta Max uPLIft
+puts as much of the routed work at NVIDIA's NVFP4 precision as fits on the eight cards, with all routed experts on the
+cards (VRAM) in decode. Experts are promoted to exactly NVFP4 precision in order of use per byte until the next does not
+fit, and the rest run from compressed IQ2-class records. This maximizes use (the mixed tally's routed counts, in-sample),
+not the number of NVFP4 experts. 6,087 of the 15,360 routed experts (39.6 %) are at NVFP4, and they carried 79 to 85 % of
+decode routes in the measured sets (in-sample). Decode runs at 104 to 127 tok/s on code and 62 to 72 on legal text from
+1K to 256K prompts, slower than Volta sPLIt. A test of how close its output is to the all-NVFP4 build, with its rules
+fixed and published before any data, is running now. Its results will be added to the repository as dated rows.
+
+| How much runs at NVFP4 precision | Volta sPLIt | Volta Max uPLIft | Volta Full NVFP4 |
+| --- | --- | --- | --- |
+| Routed experts at exactly NVFP4 precision | 0 of 15,360 (0 %) | **6,087 of 15,360 (39.6 %)** | 15,360 of 15,360 (100 %) |
+| Decode routes served at NVFP4 precision | 0 % | **79 to 85 %** (measured sets, in-sample) | 100 % |
+| Routed experts on the cards in decode | all | **all** | the most-used, the rest from host RAM |
+
+| Prompt | First token | Code | Structured (JSON) | Legal | Prose | Chat |
+| --- | --- | --- | --- | --- | --- | --- |
+| 1K | 5.6 s | 123 tok/s | 131 tok/s | 72 tok/s | 60 tok/s | 60 tok/s |
+| 32K | 31 s | 119 | 124 | 67 | 62 | 67 |
+| 128K | 106 s | 115 | 117 | 68 | 60 | 62 |
+| 256K | 210 s | 104 | 110 | 62 | 61 | 63 |
+
+<sub>One request at a time, 150 W per card, thinking off, greedy, 1,024 tokens out, the same prompts and method as the Volta sPLIt table above, mean of 2 runs, greedy outputs byte-identical across runs. Volta sPLIt's table was measured on 2026-11-05 at a 1,522 MHz ceiling, so the clocks differ. Every length from 1K to 256K, the thinking-on rows and the method are in the <a href="https://github.com/ProprietaryLegal/Volta-Max-uPLIft-FP4-DeepSeek-V4.1-Flash-1017-NVFP4-8xV100-SXM2-PP2xTP4#tokens-per-second">repository</a>.</sub>
+
+![Decode speed by prompt length, Volta Max uPLIft against Volta sPLIt's published bench, for code, structured, legal and prose](https://raw.githubusercontent.com/ProprietaryLegal/Volta-Max-uPLIft-FP4-DeepSeek-V4.1-Flash-1017-NVFP4-8xV100-SXM2-PP2xTP4/main/docs/charts/decode-by-length-light.png#gh-light-mode-only)
+![Decode speed by prompt length, Volta Max uPLIft against Volta sPLIt's published bench, for code, structured, legal and prose](https://raw.githubusercontent.com/ProprietaryLegal/Volta-Max-uPLIft-FP4-DeepSeek-V4.1-Flash-1017-NVFP4-8xV100-SXM2-PP2xTP4/main/docs/charts/decode-by-length-dark.png#gh-dark-mode-only)
+
+[Repository](https://github.com/ProprietaryLegal/Volta-Max-uPLIft-FP4-DeepSeek-V4.1-Flash-1017-NVFP4-8xV100-SXM2-PP2xTP4) · [Measurements](https://github.com/ProprietaryLegal/Volta-Max-uPLIft-FP4-DeepSeek-V4.1-Flash-1017-NVFP4-8xV100-SXM2-PP2xTP4/blob/main/docs/measurements.md) · [Speed bench](https://github.com/ProprietaryLegal/Volta-Max-uPLIft-FP4-DeepSeek-V4.1-Flash-1017-NVFP4-8xV100-SXM2-PP2xTP4#tokens-per-second) · [Accuracy test rules](https://github.com/ProprietaryLegal/Volta-Max-uPLIft-FP4-DeepSeek-V4.1-Flash-1017-NVFP4-8xV100-SXM2-PP2xTP4/tree/main/quality/closeness-test) · [Hugging Face package](https://huggingface.co/ProprietaryLegal/Volta-Max-uPLIft-FP4-DeepSeek-V4.1-Flash-1017-hot_iq-8xV100-SXM2-PP2xTP4) (upload in progress)
 
 ## Also featured: [DGX sPLIce](https://github.com/ProprietaryLegal/DGX-sPLIce-DeepSeek-V4.1-Flash-2xDGX-Spark-2xRTX3090-drafter-x86-offload)
 
