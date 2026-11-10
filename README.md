@@ -26,6 +26,29 @@ Quality, thinking off: LegalBench 0.716 balanced accuracy over 22 tasks; MMLU-Pr
 
 [Repository](https://github.com/ProprietaryLegal/Volta-sPLIt-DeepSeek-V4.1-Flash-1017-8xV100-SXM2-PP2xTP4) · [Measurements](https://github.com/ProprietaryLegal/Volta-sPLIt-DeepSeek-V4.1-Flash-1017-8xV100-SXM2-PP2xTP4/blob/main/docs/measurements.md) · [Every lever, won and lost](https://github.com/ProprietaryLegal/Volta-sPLIt-DeepSeek-V4.1-Flash-1017-8xV100-SXM2-PP2xTP4/blob/main/docs/levers.md) · [Test queue](https://github.com/ProprietaryLegal/Volta-sPLIt-DeepSeek-V4.1-Flash-1017-8xV100-SXM2-PP2xTP4/blob/main/docs/roadmap.md) · [Hugging Face card](https://huggingface.co/ProprietaryLegal/Volta-sPLIt-DeepSeek-V4.1-Flash-1017-8xV100-GGUF)
 
+## Also featured: [Volta Max uPLIft FP4](https://github.com/ProprietaryLegal/Volta-Max-uPLIft-FP4-DeepSeek-V4.1-Flash-1017-NVFP4-8xV100-SXM2-PP2xTP4): the official weights' expert precision on the same eight V100s (work in progress)
+
+[![three-tier legal-style: 57-58 tok/s](https://img.shields.io/badge/three--tier%20legal--style-57--58%20tok%2Fs-1F6FEB?style=for-the-badge)](https://github.com/ProprietaryLegal/Volta-Max-uPLIft-FP4-DeepSeek-V4.1-Flash-1017-NVFP4-8xV100-SXM2-PP2xTP4) [![three-tier general: 51-52 tok/s](https://img.shields.io/badge/three--tier%20general-51--52%20tok%2Fs-8250DF?style=for-the-badge)](https://github.com/ProprietaryLegal/Volta-Max-uPLIft-FP4-DeepSeek-V4.1-Flash-1017-NVFP4-8xV100-SXM2-PP2xTP4) [![status: work in progress](https://img.shields.io/badge/status-work%20in%20progress-D29922?style=for-the-badge)](https://github.com/ProprietaryLegal/Volta-Max-uPLIft-FP4-DeepSeek-V4.1-Flash-1017-NVFP4-8xV100-SXM2-PP2xTP4)
+
+**NVIDIA's DeepSeek-V4.1-Flash-1017-NVFP4 pack on 8x V100-SXM2-32GB, MEASURED 2026-11-09. Work in progress, and slower
+than Volta sPLIt.** Volta sPLIt fits the model on the cards by compressing the routed experts. This build asks what it
+costs to run them at the precision of DeepSeek's official weights instead: NVFP4 folds exactly to MXFP4 (44.7 billion
+values checked bit-equal), which the v100-skinny QPN kernel runs as W4A16. At that precision the experts do not all fit
+in HBM, so the most-used stay on the cards at official precision, less-used ones run from Volta sPLIt's compressed
+records, and the rest are read from host RAM. The measurements, all of the build's code, what worked, what did not and
+the planned next steps are published as they are.
+
+| | Volta sPLIt | This build, two-tier | This build, three-tier |
+| --- | --- | --- | --- |
+| Short prompts, legal-style text | 118.7 / 118.3 tok/s | 28.2 / 30.2 tok/s | 56.9 / 58.4 tok/s |
+| Short prompts, general text | 136.9 / 137.9 tok/s | 18.8 / 20.1 tok/s | 50.6 / 51.8 tok/s |
+| Decode after about 258K tokens of context | 98.1 tok/s | 30.2 tok/s (303K) | 66.1 tok/s |
+| Prompt reading, 30K to 300K tokens | 2,610 to 2,946 tok/s | 1,419 to 1,595 tok/s | 1,080 to 1,327 tok/s |
+
+<sub>Same host and day for all three builds; one request at a time, public prompts, greedy, thinking off, two runs per short set. Two-tier keeps every routed expert at official precision (hot on the cards, the rest in host RAM); three-tier runs 3.7 to 9.3 % of routed-expert calls from compressed records and passed a closeness check against two-tier on three prompts.</sub>
+
+[Repository](https://github.com/ProprietaryLegal/Volta-Max-uPLIft-FP4-DeepSeek-V4.1-Flash-1017-NVFP4-8xV100-SXM2-PP2xTP4) · [Measurements](https://github.com/ProprietaryLegal/Volta-Max-uPLIft-FP4-DeepSeek-V4.1-Flash-1017-NVFP4-8xV100-SXM2-PP2xTP4/blob/main/docs/measurements.md) · [Plans](https://github.com/ProprietaryLegal/Volta-Max-uPLIft-FP4-DeepSeek-V4.1-Flash-1017-NVFP4-8xV100-SXM2-PP2xTP4/tree/main/docs/plans) · [Research](https://github.com/ProprietaryLegal/Volta-Max-uPLIft-FP4-DeepSeek-V4.1-Flash-1017-NVFP4-8xV100-SXM2-PP2xTP4/tree/main/docs/research)
+
 ## Also featured: [DGX sPLIce](https://github.com/ProprietaryLegal/DGX-sPLIce-DeepSeek-V4.1-Flash-2xDGX-Spark-2xRTX3090-drafter-x86-offload)
 
 **DGX sPLIce: DeepSeek-V4.1-Flash on 2x DGX Spark + 2x RTX 3090 drafter, x86 offload.** Two NVIDIA DGX Spark (GB10)
@@ -69,6 +92,7 @@ Earlier standalone releases of DGX sPLIce's parts and research, each with its ow
 | Repository | What it is |
 | --- | --- |
 | [Volta-sPLIt-DeepSeek-V4.1-Flash-1017-8xV100-SXM2-PP2xTP4](https://github.com/ProprietaryLegal/Volta-sPLIt-DeepSeek-V4.1-Flash-1017-8xV100-SXM2-PP2xTP4) | **~200 tok/s code, ~110 legal**: DeepSeek-V4.1-Flash-1017 on 8x V100, PP2 x TP4, every expert resident; full patch series, measurements and test queue (2026-11-05 checkpoint) |
+| [Volta-Max-uPLIft-FP4-DeepSeek-V4.1-Flash-1017-NVFP4-8xV100-SXM2-PP2xTP4](https://github.com/ProprietaryLegal/Volta-Max-uPLIft-FP4-DeepSeek-V4.1-Flash-1017-NVFP4-8xV100-SXM2-PP2xTP4) | Work in progress: NVIDIA's NVFP4 pack of the same model on the same 8x V100, routed experts at the official weights' precision; 51-58 tok/s today, every measurement and plan published |
 | [deepseek-v4-flash-v100](https://github.com/ProprietaryLegal/deepseek-v4-flash-v100) | DeepSeek-V4-Flash and V4.1-Flash on NVIDIA V100: llama.cpp recipe and quantized-KV fixes (V4); 1Cat-vLLM results so far and patches (V4.1, 2026-11-01) |
 | [swift-1.5-v100](https://github.com/ProprietaryLegal/swift-1.5-v100) | Swift 1.5 on four V100s: 1Cat-vLLM serving recipe and a measured comparison with Qwen3.8-27B |
 | [V100 research notes](https://github.com/ProprietaryLegal/pli-labs/tree/main/research/v100) | Volta serving research in the pli-labs hub |
