@@ -30,7 +30,7 @@ Quality, thinking off: LegalBench 0.716 balanced accuracy over 22 tasks; MMLU-Pr
 
 ## Also featured: [Volta Max uPLIft](https://github.com/ProprietaryLegal/Volta-Max-uPLIft-FP4-DeepSeek-V4.1-Flash-1017-NVFP4-8xV100-SXM2-PP2xTP4): as much of the routed work at NVFP4 precision as fits, every expert on the cards
 
-[![share of decode work at NVFP4 precision: 79-85 %](https://img.shields.io/badge/share%20of%20decode%20work%20at%20NVFP4%20precision-79--85%20%25-76B900?style=for-the-badge)](https://github.com/ProprietaryLegal/Volta-Max-uPLIft-FP4-DeepSeek-V4.1-Flash-1017-NVFP4-8xV100-SXM2-PP2xTP4) [![experts at NVFP4 precision: 6,087 of 15,360](https://img.shields.io/badge/experts%20at%20NVFP4%20precision-6%2C087%20of%2015%2C360-76B900?style=for-the-badge)](https://github.com/ProprietaryLegal/Volta-Max-uPLIft-FP4-DeepSeek-V4.1-Flash-1017-NVFP4-8xV100-SXM2-PP2xTP4) [![code and JSON: 104-131 tok/s](https://img.shields.io/badge/code%20and%20JSON-104--131%20tok%2Fs-2EA043?style=for-the-badge)](https://github.com/ProprietaryLegal/Volta-Max-uPLIft-FP4-DeepSeek-V4.1-Flash-1017-NVFP4-8xV100-SXM2-PP2xTP4) [![legal: 62-72 tok/s](https://img.shields.io/badge/legal-62--72%20tok%2Fs-1F6FEB?style=for-the-badge)](https://github.com/ProprietaryLegal/Volta-Max-uPLIft-FP4-DeepSeek-V4.1-Flash-1017-NVFP4-8xV100-SXM2-PP2xTP4) [![prose and chat: 60-68 tok/s](https://img.shields.io/badge/prose%20and%20chat-60--68%20tok%2Fs-8250DF?style=for-the-badge)](https://github.com/ProprietaryLegal/Volta-Max-uPLIft-FP4-DeepSeek-V4.1-Flash-1017-NVFP4-8xV100-SXM2-PP2xTP4) [![prompt reading at 128K: 1,221-1,263 tok/s](https://img.shields.io/badge/prompt%20reading%20at%20128K-1%2C221--1%2C263%20tok%2Fs-D29922?style=for-the-badge)](https://github.com/ProprietaryLegal/Volta-Max-uPLIft-FP4-DeepSeek-V4.1-Flash-1017-NVFP4-8xV100-SXM2-PP2xTP4) [![experts on the cards in decode: all 15,360](https://img.shields.io/badge/experts%20on%20the%20cards%20in%20decode-all%2015%2C360-555555?style=for-the-badge)](https://github.com/ProprietaryLegal/Volta-Max-uPLIft-FP4-DeepSeek-V4.1-Flash-1017-NVFP4-8xV100-SXM2-PP2xTP4)
+[![share of decode work at NVFP4 precision: 79-85 %](https://img.shields.io/badge/share%20of%20decode%20work%20at%20NVFP4%20precision-79--85%20%25-76B900?style=for-the-badge)](https://github.com/ProprietaryLegal/Volta-Max-uPLIft-FP4-DeepSeek-V4.1-Flash-1017-NVFP4-8xV100-SXM2-PP2xTP4) [![same next token as NVIDIA's NVFP4 pack: 95.1 %, Volta sPLIt 92.2 %](https://img.shields.io/badge/same%20next%20token%20as%20NVFP4-95.1%20%25%20(Volta%20sPLIt%2092.2%20%25)-76B900?style=for-the-badge)](https://github.com/ProprietaryLegal/Volta-Max-uPLIft-FP4-DeepSeek-V4.1-Flash-1017-NVFP4-8xV100-SXM2-PP2xTP4#how-close-to-nvfp4) [![experts at NVFP4 precision: 6,087 of 15,360](https://img.shields.io/badge/experts%20at%20NVFP4%20precision-6%2C087%20of%2015%2C360-76B900?style=for-the-badge)](https://github.com/ProprietaryLegal/Volta-Max-uPLIft-FP4-DeepSeek-V4.1-Flash-1017-NVFP4-8xV100-SXM2-PP2xTP4) [![code and JSON: 104-131 tok/s](https://img.shields.io/badge/code%20and%20JSON-104--131%20tok%2Fs-2EA043?style=for-the-badge)](https://github.com/ProprietaryLegal/Volta-Max-uPLIft-FP4-DeepSeek-V4.1-Flash-1017-NVFP4-8xV100-SXM2-PP2xTP4) [![legal: 62-72 tok/s](https://img.shields.io/badge/legal-62--72%20tok%2Fs-1F6FEB?style=for-the-badge)](https://github.com/ProprietaryLegal/Volta-Max-uPLIft-FP4-DeepSeek-V4.1-Flash-1017-NVFP4-8xV100-SXM2-PP2xTP4) [![prose and chat: 60-68 tok/s](https://img.shields.io/badge/prose%20and%20chat-60--68%20tok%2Fs-8250DF?style=for-the-badge)](https://github.com/ProprietaryLegal/Volta-Max-uPLIft-FP4-DeepSeek-V4.1-Flash-1017-NVFP4-8xV100-SXM2-PP2xTP4) [![prompt reading at 128K: 1,221-1,263 tok/s](https://img.shields.io/badge/prompt%20reading%20at%20128K-1%2C221--1%2C263%20tok%2Fs-D29922?style=for-the-badge)](https://github.com/ProprietaryLegal/Volta-Max-uPLIft-FP4-DeepSeek-V4.1-Flash-1017-NVFP4-8xV100-SXM2-PP2xTP4) [![experts on the cards in decode: all 15,360](https://img.shields.io/badge/experts%20on%20the%20cards%20in%20decode-all%2015%2C360-555555?style=for-the-badge)](https://github.com/ProprietaryLegal/Volta-Max-uPLIft-FP4-DeepSeek-V4.1-Flash-1017-NVFP4-8xV100-SXM2-PP2xTP4)
 
 **DeepSeek-V4.1-Flash-1017 on the same 8x V100-SXM2-32GB, MEASURED 2026-11-10 at a 1,425 MHz clock ceiling.** Volta Max uPLIft
 puts as much of the routed work at NVIDIA's NVFP4 precision as fits on the eight cards, with all routed experts on the
@@ -38,14 +38,30 @@ cards (VRAM) in decode. Experts are promoted to exactly NVFP4 precision in order
 fit, and the rest run from compressed IQ2-class records. This maximizes use (the mixed tally's routed counts, in-sample),
 not the number of NVFP4 experts. 6,087 of the 15,360 routed experts are at NVFP4, and they carried 79 to 85 % of
 decode routes in the measured sets (in-sample). Decode runs at 104 to 127 tok/s on code and 62 to 72 on legal text from
-1K to 256K prompts, slower than Volta sPLIt. A test of how close its output is to the all-NVFP4 build, with its rules
-fixed and published before any data, is running now. Its results will be added to the repository as dated rows.
+1K to 256K prompts, slower than Volta sPLIt.
+
+**How close to NVIDIA's NVFP4 pack, MEASURED 2026-11-11 at a 1,475 MHz ceiling** (320 contexts and 513 MMLU questions,
+greedy, thinking off, rules fixed and published before any capture). Volta Max uPLIft picks the same next token as the
+NVFP4 reference (Volta Full NVFP4) on 95.1 % of compared tokens, Volta sPLIt on 92.2 %. Its KL divergence from the
+reference is 0.079 nats against Volta sPLIt's 0.196, and on the tokens both builds still share with the reference it
+removes 63 % of Volta sPLIt's KL divergence. It changes 1.6 % of the multiple-choice answers, Volta sPLIt 15.4 %.
 
 | How much runs at NVFP4 precision | Volta sPLIt | Volta Max uPLIft | Volta Full NVFP4 |
 | --- | --- | --- | --- |
 | Share of decode work (routes) at NVFP4 precision | 0 % | **79 to 85 %** (measured sets, in-sample) | 100 % |
 | Routed experts at exactly NVFP4 precision | 0 of 15,360 | **6,087 of 15,360** | 15,360 of 15,360 |
 | Routed experts on the cards in decode | all | **all** | the most-used, the rest from host RAM |
+
+| How close to the NVFP4 reference | Volta sPLIt | Volta Max uPLIft | Volta Full NVFP4 (the reference) |
+| --- | --- | --- | --- |
+| Same next token as the reference | 92.2 % | **95.1 %** | repeat: 100 % |
+| Mean KL divergence from the reference (nats, top 20, lower bound) | 0.196 | **0.079** | repeat: 0 |
+| Multiple-choice answers that differ from the reference | 15.4 % | **1.6 %** | repeat: 0 % |
+| Multiple-choice accuracy, 513 MMLU questions | 84.4 % | 83.6 % | 83.8 % |
+
+<sub>Volta sPLIt as captured on 2026-11-10. The reference repeat is the same boot run again on 50 contexts and 50 questions. Both accuracies are not distinguishable from the reference's at this sample size. 37 of Volta sPLIt's 79 changed answers are on the 38 questions the reference left unanswered: on the 475 it answered, the changed shares are 1.7 % and 8.8 % (counted after scoring, outside the preregistered rules). Intervals, verdicts, receipts and the scoring script are in the <a href="https://github.com/ProprietaryLegal/Volta-Max-uPLIft-FP4-DeepSeek-V4.1-Flash-1017-NVFP4-8xV100-SXM2-PP2xTP4#how-close-to-nvfp4">repository</a>.</sub>
+
+[![Greedy continuations that stay identical to the NVFP4 reference: Volta Max uPLIft, Volta sPLIt and the reference's own repeat](https://raw.githubusercontent.com/ProprietaryLegal/Volta-Max-uPLIft-FP4-DeepSeek-V4.1-Flash-1017-NVFP4-8xV100-SXM2-PP2xTP4/main/quality/closeness-test/charts/survival.svg)](https://github.com/ProprietaryLegal/Volta-Max-uPLIft-FP4-DeepSeek-V4.1-Flash-1017-NVFP4-8xV100-SXM2-PP2xTP4#how-close-to-nvfp4)
 
 | Prompt | First token | Code | Structured (JSON) | Legal | Prose | Chat |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -59,7 +75,7 @@ fixed and published before any data, is running now. Its results will be added t
 ![Decode speed by prompt length, Volta Max uPLIft against Volta sPLIt's published bench, for code, structured, legal and prose](https://raw.githubusercontent.com/ProprietaryLegal/Volta-Max-uPLIft-FP4-DeepSeek-V4.1-Flash-1017-NVFP4-8xV100-SXM2-PP2xTP4/main/docs/charts/decode-by-length-light.png#gh-light-mode-only)
 ![Decode speed by prompt length, Volta Max uPLIft against Volta sPLIt's published bench, for code, structured, legal and prose](https://raw.githubusercontent.com/ProprietaryLegal/Volta-Max-uPLIft-FP4-DeepSeek-V4.1-Flash-1017-NVFP4-8xV100-SXM2-PP2xTP4/main/docs/charts/decode-by-length-dark.png#gh-dark-mode-only)
 
-[Repository](https://github.com/ProprietaryLegal/Volta-Max-uPLIft-FP4-DeepSeek-V4.1-Flash-1017-NVFP4-8xV100-SXM2-PP2xTP4) · [Measurements](https://github.com/ProprietaryLegal/Volta-Max-uPLIft-FP4-DeepSeek-V4.1-Flash-1017-NVFP4-8xV100-SXM2-PP2xTP4/blob/main/docs/measurements.md) · [Speed bench](https://github.com/ProprietaryLegal/Volta-Max-uPLIft-FP4-DeepSeek-V4.1-Flash-1017-NVFP4-8xV100-SXM2-PP2xTP4#tokens-per-second) · [Accuracy test rules](https://github.com/ProprietaryLegal/Volta-Max-uPLIft-FP4-DeepSeek-V4.1-Flash-1017-NVFP4-8xV100-SXM2-PP2xTP4/tree/main/quality/closeness-test) · [Hugging Face package](https://huggingface.co/ProprietaryLegal/Volta-Max-uPLIft-FP4-DeepSeek-V4.1-Flash-1017-hot_iq-8xV100-SXM2-PP2xTP4) (upload in progress)
+[Repository](https://github.com/ProprietaryLegal/Volta-Max-uPLIft-FP4-DeepSeek-V4.1-Flash-1017-NVFP4-8xV100-SXM2-PP2xTP4) · [Measurements](https://github.com/ProprietaryLegal/Volta-Max-uPLIft-FP4-DeepSeek-V4.1-Flash-1017-NVFP4-8xV100-SXM2-PP2xTP4/blob/main/docs/measurements.md) · [Speed bench](https://github.com/ProprietaryLegal/Volta-Max-uPLIft-FP4-DeepSeek-V4.1-Flash-1017-NVFP4-8xV100-SXM2-PP2xTP4#tokens-per-second) · [How close to NVFP4](https://github.com/ProprietaryLegal/Volta-Max-uPLIft-FP4-DeepSeek-V4.1-Flash-1017-NVFP4-8xV100-SXM2-PP2xTP4#how-close-to-nvfp4) · [Closeness receipts and score](https://github.com/ProprietaryLegal/Volta-Max-uPLIft-FP4-DeepSeek-V4.1-Flash-1017-NVFP4-8xV100-SXM2-PP2xTP4/tree/main/quality/closeness-test) · [Hugging Face package](https://huggingface.co/ProprietaryLegal/Volta-Max-uPLIft-FP4-DeepSeek-V4.1-Flash-1017-hot_iq-8xV100-SXM2-PP2xTP4) (upload in progress)
 
 ## Also featured: [DGX sPLIce](https://github.com/ProprietaryLegal/DGX-sPLIce-DeepSeek-V4.1-Flash-2xDGX-Spark-2xRTX3090-drafter-x86-offload)
 
@@ -78,9 +94,9 @@ cache.
 
 ## Also featured: [Volta Full NVFP4](https://github.com/ProprietaryLegal/Volta-Full-NVFP4-DeepSeek-V4.1-Flash-8xV100): every expert at NVFP4 precision, using host RAM
 
-Volta Full NVFP4 runs every routed expert at exactly NVIDIA's NVFP4 precision on the same eight V100s, the most-used on the cards and the rest served from host RAM over PCIe. Slower, with no expert below NVFP4 precision at any time: 28 to 30 tok/s on legal-style text and 19 to 20 on general text, a 498,099-token prompt read in 326.6 s, and 44,696,862,720 folded expert values checked bit-equal to the NVFP4 formula (MEASURED 2026-11-09).
+Volta Full NVFP4 runs every routed expert at exactly NVIDIA's NVFP4 precision on the same eight V100s, the most-used on the cards and the rest served from host RAM over PCIe. Slower, with no expert below NVFP4 precision at any time: 28 to 30 tok/s on legal-style text and 19 to 20 on general text, a 498,099-token prompt read in 326.6 s, and 44,696,862,720 folded expert values checked bit-equal to the NVFP4 formula (MEASURED 2026-11-09). As the reference of Volta Max uPLIft's closeness test it answered 83.8 % of 513 MMLU questions correctly (95 % interval 80.7 % to 86.7 %, greedy, thinking off), and a repeat in the same boot was identical on all 50 contexts and 50 questions (MEASURED 2026-11-11, 1,475 MHz).
 
-[Repository](https://github.com/ProprietaryLegal/Volta-Full-NVFP4-DeepSeek-V4.1-Flash-8xV100)
+[Repository](https://github.com/ProprietaryLegal/Volta-Full-NVFP4-DeepSeek-V4.1-Flash-8xV100) · [Measurements](https://github.com/ProprietaryLegal/Volta-Full-NVFP4-DeepSeek-V4.1-Flash-8xV100/blob/main/docs/measurements.md) · [The closeness test](https://github.com/ProprietaryLegal/Volta-Max-uPLIft-FP4-DeepSeek-V4.1-Flash-1017-NVFP4-8xV100-SXM2-PP2xTP4#how-close-to-nvfp4)
 
 PLI Labs is the open research arm of Proprietary Legal Intelligence. We publish methods, code, and measured results so you can inspect the work before hiring us. PLI builds AI around a legal organization's own work product, with retrieval, staged workflows, validation, and attorney review.
 
