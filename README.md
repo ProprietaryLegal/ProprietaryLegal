@@ -13,6 +13,12 @@ Your proprietary work product is your proprietary intelligence.
 Every build serves DeepSeek-V4.1-Flash-1017 on hardware you can own. Each card shows figures MEASURED on that
 build's own bench; its repository gives the method, the conditions and the losses beside the wins.
 
+### [Volta 12X AmPLIfy](https://github.com/ProprietaryLegal/Volta-12X-AmPLIfy-DeepSeek-V4.1-Flash-1017-NVFP4-12xV100-SXM2-PP3xTP4)
+
+Every routed expert at NVIDIA's NVFP4 precision on twelve cards, three pipeline stages of four.
+
+[![Volta 12X AmPLIfy: 12x V100-SXM2-32GB; all 15,360 routed experts at NVFP4 precision on the cards; 130 tok/s for one request on fresh text, 179 when copying text, at 200 W; prompt reading 3,850 tok/s at 61K, a 426K prompt's first token after 173 s; four requests together 312 tok/s in sum](assets/volta-12x-amplify.svg)](https://github.com/ProprietaryLegal/Volta-12X-AmPLIfy-DeepSeek-V4.1-Flash-1017-NVFP4-12xV100-SXM2-PP3xTP4)
+
 ### [Volta Max uPLIft](https://github.com/ProprietaryLegal/Volta-Max-uPLIft-FP4-DeepSeek-V4.1-Flash-1017-NVFP4-8xV100-SXM2-PP2xTP4)
 
 As much of the routed work at NVIDIA's NVFP4 precision as fits on eight cards, every expert on the cards.

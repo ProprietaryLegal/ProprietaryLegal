@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="212" viewBox="0 0 880 212" role="img" aria-label="Volta 12X AmPLIfy: 15,360 experts all routed experts at NVFP4; 130 tok/s one request, fresh text; 3,850 tok/s prompt reading at 61K; 312 tok/s four requests together">
+<rect width="880" height="212" rx="12" fill="#15243d"/>
+<rect x="28" y="26" width="4" height="34" rx="2" fill="#d4af5a"/>
+<text x="42" y="42" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="21" font-weight="700" fill="#f0efec">Volta 12X AmPLIfy</text>
+<text x="42" y="60" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="12.5" fill="#c3c2b7">12x V100-SXM2-32GB (2018)  ·  DeepSeek-V4.1-Flash-1017  ·  every routed expert at NVFP4, on the cards</text>
+<rect x="28.0" y="78" width="195.5" height="104" rx="8" fill="#1c3050" stroke="#2c4166" stroke-width="1"/>
+<text x="211.5" y="100" text-anchor="end" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="11.5" font-weight="600" letter-spacing="0.4" fill="#d4af5a">experts</text>
+<text x="42.0" y="124" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="30" font-weight="700" fill="#f0efec">15,360</text>
+<text x="42.0" y="146" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="12.5" fill="#f0efec">all routed experts at NVFP4</text>
+<text x="42.0" y="165" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="11.5" fill="#8f9bb0">none compressed</text>
+<rect x="237.5" y="78" width="195.5" height="104" rx="8" fill="#1c3050" stroke="#2c4166" stroke-width="1"/>
+<text x="421.0" y="100" text-anchor="end" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="11.5" font-weight="600" letter-spacing="0.4" fill="#d4af5a">tok/s</text>
+<text x="251.5" y="124" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="30" font-weight="700" fill="#f0efec">130</text>
+<text x="251.5" y="146" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="12.5" fill="#f0efec">one request, fresh text</text>
+<text x="251.5" y="165" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="11.5" fill="#8f9bb0">179 copying text, 200 W</text>
+<rect x="447.0" y="78" width="195.5" height="104" rx="8" fill="#1c3050" stroke="#2c4166" stroke-width="1"/>
+<text x="630.5" y="100" text-anchor="end" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="11.5" font-weight="600" letter-spacing="0.4" fill="#d4af5a">tok/s</text>
+<text x="461.0" y="124" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="30" font-weight="700" fill="#f0efec">3,850</text>
+<text x="461.0" y="146" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="12.5" fill="#f0efec">prompt reading at 61K</text>
+<text x="461.0" y="165" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="11.5" fill="#8f9bb0">426K prompt: first token 173 s</text>
+<rect x="656.5" y="78" width="195.5" height="104" rx="8" fill="#1c3050" stroke="#2c4166" stroke-width="1"/>
+<text x="840.0" y="100" text-anchor="end" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="11.5" font-weight="600" letter-spacing="0.4" fill="#d4af5a">tok/s</text>
+<text x="670.5" y="124" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="30" font-weight="700" fill="#f0efec">312</text>
+<text x="670.5" y="146" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="12.5" fill="#f0efec">four requests together</text>
+<text x="670.5" y="165" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="11.5" fill="#8f9bb0">in sum; four chats kept warm</text>
+<text x="852" y="203" text-anchor="end" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="10" fill="#8f9bb0">MEASURED · method and conditions in the repository</text>
+</svg>
