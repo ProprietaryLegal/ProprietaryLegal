@@ -64,9 +64,8 @@ RTX 3090s.
 
 ## More
 
-[All repositories](https://github.com/ProprietaryLegal?tab=repositories) (components, earlier builds, mirrors of
-upstream work with their credit) · [pli-labs](https://github.com/ProprietaryLegal/pli-labs) (legal model prunes,
-evaluation methods, research) · [Hugging Face](https://huggingface.co/ProprietaryLegal)
+Components, earlier builds and mirrors of upstream work are under
+[all repositories](https://github.com/ProprietaryLegal?tab=repositories).
 
 PLI Labs is the open research arm of Proprietary Legal Intelligence. We publish methods, code and measured results
 so you can inspect the work before hiring us. For AI systems on approved frontier APIs, private cloud or hardware
