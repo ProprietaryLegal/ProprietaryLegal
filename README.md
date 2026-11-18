@@ -43,6 +43,15 @@ Every routed expert at exactly NVFP4 precision on eight cards, the less-used one
 Two DGX Sparks serve the model; an x86 machine holds the Engram tables in RAM over RDMA and runs the drafter on two RTX 3090s.
 
 [![DGX sPLIce: 2x DGX Spark, 2x RTX 3090 and one x86 host; at 128K context: decode 62 tok/s on prose for one stream, prefill 2,650 tok/s; four streams 322 tok/s on JSON, 192 on code; KV pool 1.93M tokens, 327,680 tokens of context per request](assets/dgx-splice.svg)](https://github.com/ProprietaryLegal/DGX-sPLIce-DeepSeek-V4.1-Flash-2xDGX-Spark-2xRTX3090-drafter-x86-offload)
+## The skill
+
+### [PLI Volta Builder](https://github.com/ProprietaryLegal/pli-volta-builder)
+
+An agent skill for Claude Code and Codex that runs the campaign behind these builds on your own cards: intake,
+upstream first, layout arithmetic, a test harness with strict judges, a measured time budget, a gated
+hill-climbing loop that keeps only what passes, kernels, independent review, publishing. Install with
+`./install.sh --both`.
+
 ## More
 
 Components, earlier builds and mirrors of upstream work are under
