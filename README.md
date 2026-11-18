@@ -22,24 +22,23 @@ As much of the routed work at NVIDIA's NVFP4 precision as fits on eight cards, e
 | Speed | 143 to 180 tok/s on code, 94.7 to 97.3 on legal-style text |
 | Context | First token after 1.0 s at 1K, 54 s at 128K, 108 s at 256K; a follow-up at 100K resumes in 0.69 s |
 | Concurrency | Three requests together: 176 to 192 tok/s in all (1.48x to 1.62x one stream), same tokens as alone |
-| Accuracy | Same next token as the NVFP4 reference on 95.1 % of tokens (KL 0.079 nats); MMLU 83.6 % of 513 |
+| Accuracy | Same next token as NVIDIA's NVFP4 pack on 95.1 % of tokens (KL 0.079 nats); MMLU 83.6 % of 513 |
 
 ### [Volta sPLIt](https://github.com/ProprietaryLegal/Volta-sPLIt-DeepSeek-V4.1-Flash-1017-8xV100-SXM2-PP2xTP4)
 
-The whole 249 GB model resident on eight 2018 cards: the fastest of the eight-card builds.
+The whole 249 GB model resident on eight 2018 cards.
 
 | | |
 | --- | --- |
 | Hardware | 8x V100-SXM2-32GB, two NVLink boards, two pipeline stages of four cards, 150 W per card |
 | Speed | About 200 tok/s on code and JSON, 105 to 118 on legal text, 85 to 110 on prose and chat |
 | Context | Prompt reading up to 2,200 tok/s; first token after 59 s at 128K and 119 s at 256K |
-| Concurrency | One request at a time on this build (several together: see Volta Max uPLIft) |
+| Concurrency | One request at a time |
 | Accuracy | LegalBench 0.716 balanced accuracy (22 tasks); MMLU-Pro 79.9 %; HumanEval+ 89.6 %; the original model's top next token 89.0 % of the time |
 
 ### [Volta Full NVFP4](https://github.com/ProprietaryLegal/Volta-Full-NVFP4-DeepSeek-V4.1-Flash-8xV100)
 
-Every routed expert at exactly NVFP4 precision on the same eight cards, the less-used ones from host RAM: the
-reference the other builds are measured against.
+Every routed expert at exactly NVFP4 precision on eight cards, the less-used ones served from host RAM.
 
 | | |
 | --- | --- |
