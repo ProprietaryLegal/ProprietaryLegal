@@ -1,27 +1,30 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="880" height="212" viewBox="0 0 880 212" role="img" aria-label="Volta Full NVFP4: 15,360 experts all of the routed experts; 28–30 tok/s legal-style text; 498K tokens read in 326.6 s; 83.8 % MMLU, 513 questions">
-<rect width="880" height="212" rx="12" fill="#15243d"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="232" viewBox="0 0 880 232" role="img" aria-label="Volta Full NVFP4: decode 28–30 tok/s legal-style text; prefill 1,419 tok/s reading, up to 1,595; concurrent 1 request at a time on this build; kv · tokens 2.08M KV pool">
+<rect width="880" height="232" rx="12" fill="#15243d"/>
 <rect x="28" y="26" width="4" height="34" rx="2" fill="#d4af5a"/>
 <text x="42" y="42" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="21" font-weight="700" fill="#f0efec">Volta Full NVFP4</text>
 <text x="42" y="60" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="12.5" fill="#c3c2b7">8x V100-SXM2-32GB + host RAM  ·  DeepSeek-V4.1-Flash-1017  ·  every routed expert at NVFP4</text>
-<rect x="28.0" y="78" width="195.5" height="104" rx="8" fill="#1c3050" stroke="#2c4166" stroke-width="1"/>
-<text x="211.5" y="100" text-anchor="end" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="11.5" font-weight="600" letter-spacing="0.4" fill="#d4af5a">experts</text>
-<text x="42.0" y="124" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="30" font-weight="700" fill="#f0efec">15,360</text>
-<text x="42.0" y="146" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="12.5" fill="#f0efec">all of the routed experts</text>
-<text x="42.0" y="165" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="11.5" fill="#8f9bb0">at exactly NVFP4 precision</text>
-<rect x="237.5" y="78" width="195.5" height="104" rx="8" fill="#1c3050" stroke="#2c4166" stroke-width="1"/>
-<text x="421.0" y="100" text-anchor="end" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="11.5" font-weight="600" letter-spacing="0.4" fill="#d4af5a">tok/s</text>
-<text x="251.5" y="124" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="30" font-weight="700" fill="#f0efec">28–30</text>
-<text x="251.5" y="146" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="12.5" fill="#f0efec">legal-style text</text>
-<text x="251.5" y="165" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="11.5" fill="#8f9bb0">general text 19–20</text>
-<rect x="447.0" y="78" width="195.5" height="104" rx="8" fill="#1c3050" stroke="#2c4166" stroke-width="1"/>
-<text x="630.5" y="100" text-anchor="end" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="11.5" font-weight="600" letter-spacing="0.4" fill="#d4af5a">tokens</text>
-<text x="461.0" y="124" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="30" font-weight="700" fill="#f0efec">498K</text>
-<text x="461.0" y="146" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="12.5" fill="#f0efec">read in 326.6 s</text>
-<text x="461.0" y="165" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="11.5" fill="#8f9bb0">one prompt</text>
-<rect x="656.5" y="78" width="195.5" height="104" rx="8" fill="#1c3050" stroke="#2c4166" stroke-width="1"/>
-<text x="840.0" y="100" text-anchor="end" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="11.5" font-weight="600" letter-spacing="0.4" fill="#d4af5a">%</text>
-<text x="670.5" y="124" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="30" font-weight="700" fill="#f0efec">83.8</text>
-<text x="670.5" y="146" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="12.5" fill="#f0efec">MMLU, 513 questions</text>
-<text x="670.5" y="165" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="11.5" fill="#8f9bb0">greedy, thinking off</text>
-<text x="852" y="203" text-anchor="end" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="10" fill="#8f9bb0">MEASURED · method and conditions in the repository</text>
+<rect x="28.0" y="78" width="195.5" height="124" rx="8" fill="#1c3050" stroke="#2c4166" stroke-width="1"/>
+<text x="42.0" y="101" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="10.5" font-weight="700" letter-spacing="1.2" fill="#c3c2b7">DECODE</text>
+<text x="42.0" y="144" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="36" font-weight="800" fill="#f0efec">28–30</text>
+<text x="210.5" y="144" text-anchor="end" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="14" font-weight="700" fill="#d4af5a">tok/s</text>
+<text x="42.0" y="167" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="12.5" fill="#f0efec">legal-style text</text>
+<text x="42.0" y="186" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="11" fill="#8f9bb0">changes little with context</text>
+<rect x="237.5" y="78" width="195.5" height="124" rx="8" fill="#1c3050" stroke="#2c4166" stroke-width="1"/>
+<text x="251.5" y="101" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="10.5" font-weight="700" letter-spacing="1.2" fill="#c3c2b7">PREFILL</text>
+<text x="251.5" y="144" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="36" font-weight="800" fill="#f0efec">1,419</text>
+<text x="420.0" y="144" text-anchor="end" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="14" font-weight="700" fill="#d4af5a">tok/s</text>
+<text x="251.5" y="167" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="12.5" fill="#f0efec">reading, up to 1,595</text>
+<text x="251.5" y="186" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="11" fill="#8f9bb0">498K tokens read in 326.6 s</text>
+<rect x="447.0" y="78" width="195.5" height="124" rx="8" fill="#1c3050" stroke="#2c4166" stroke-width="1"/>
+<text x="461.0" y="101" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="10.5" font-weight="700" letter-spacing="1.2" fill="#c3c2b7">CONCURRENT</text>
+<text x="461.0" y="144" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="40" font-weight="800" fill="#f0efec">1</text>
+<text x="629.5" y="144" text-anchor="end" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="14" font-weight="700" fill="#d4af5a">request</text>
+<text x="461.0" y="167" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="12.5" fill="#f0efec">at a time on this build</text>
+<text x="461.0" y="186" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="11" fill="#8f9bb0">experts staged from host RAM</text>
+<rect x="656.5" y="78" width="195.5" height="124" rx="8" fill="#1c3050" stroke="#2c4166" stroke-width="1"/>
+<text x="670.5" y="101" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="10.5" font-weight="700" letter-spacing="1.2" fill="#c3c2b7">KV · TOKENS</text>
+<text x="670.5" y="144" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="36" font-weight="800" fill="#f0efec">2.08M</text>
+<text x="670.5" y="167" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="12.5" fill="#f0efec">KV pool</text>
+<text x="670.5" y="186" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="11" fill="#8f9bb0">524K context per request</text>
+<text x="852" y="222" text-anchor="end" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="10" fill="#8f9bb0">MEASURED on this build · method and conditions in its repository</text>
 </svg>
