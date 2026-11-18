@@ -43,6 +43,15 @@ Every routed expert at exactly NVFP4 precision on eight cards, the less-used one
 Two DGX Sparks serve the model; an x86 machine holds the Engram tables in RAM over RDMA and runs the drafter on two RTX 3090s.
 
 [![DGX sPLIce: 2x DGX Spark, 2x RTX 3090 and one x86 host; at 128K context: decode 62 tok/s on prose for one stream, prefill 2,650 tok/s; four streams 322 tok/s on JSON, 192 on code; KV pool 1.93M tokens, 327,680 tokens of context per request](assets/dgx-splice.svg)](https://github.com/ProprietaryLegal/DGX-sPLIce-DeepSeek-V4.1-Flash-2xDGX-Spark-2xRTX3090-drafter-x86-offload)
+## The research
+
+### [Volta V100 research](https://proprietarylegal.github.io/volta-v100-research/)
+
+The long read and the source research behind the Volta builds: the card's architecture, every optimization build
+by build (with the ones that lost), the test method, kernel building for sm_70, and a
+[hardware list with links](https://proprietarylegal.github.io/volta-v100-research/hardware.html) for building your
+own boards. [Repository](https://github.com/ProprietaryLegal/volta-v100-research).
+
 ## The skill
 
 ### [PLI Volta Builder](https://github.com/ProprietaryLegal/pli-volta-builder)
