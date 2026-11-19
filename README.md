@@ -18,7 +18,7 @@ publishes that row) and its KV cache; its repository gives the method, the condi
 
 Every routed expert at NVIDIA's NVFP4 precision on twelve cards, three pipeline stages of four.
 
-[![Volta 12X AmPLIfy: 12x V100-SXM2-32GB; at 128K context: decode about 175 tok/s for one code request, cold read (legal about 94, prose about 80; a decode figure is the text's, about 9 % either way); prefill 4,657 tok/s on code, 4,360 at 256K, legal 3,944, prose 4,331; three code requests together 392 tok/s summed, 400 on one cached document; KV cache: 524K tokens of context per request, four slots; first token on a cached 128K document 0.4 s. MEASURED 2026-11-19](assets/volta-12x-amplify.svg)](https://github.com/ProprietaryLegal/Volta-12X-AmPLIfy-DeepSeek-V4.1-Flash-1017-NVFP4-12xV100-SXM2-PP3xTP4)
+[![Volta 12X AmPLIfy: 12x V100-SXM2-32GB; at 128K context: decode 157 to 175 tok/s for one code request, cold read, across the two benches of 2026-11-19 (legal about 93, prose 80 to 86; a decode figure is the generated text's, about 10 % either way); prefill 4,670 tok/s on code, 4,518 at 256K, legal 4,538, prose 4,586; three code requests together 360 to 392 tok/s summed, 427 on one cached document; KV cache: 524K tokens of context per request, four slots; first token on a cached 128K document 0.4 s. MEASURED 2026-11-19](assets/volta-12x-amplify.svg)](https://github.com/ProprietaryLegal/Volta-12X-AmPLIfy-DeepSeek-V4.1-Flash-1017-NVFP4-12xV100-SXM2-PP3xTP4)
 
 ### [Volta Max uPLIft](https://github.com/ProprietaryLegal/Volta-Max-uPLIft-FP4-DeepSeek-V4.1-Flash-1017-NVFP4-8xV100-SXM2-PP2xTP4)
 
